@@ -1,0 +1,348 @@
+/*Greeting message that displays Hello,Ziyad */
+@keyframes hello-msg{
+    0%{
+        transform: translateY(-10em);
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.7;
+    }
+    100%{
+        opacity: 1; 
+    }
+}
+
+/*The description message under hello-msg*/
+@keyframes description{
+    0%{
+        transform: translateX(-20em); 
+        opacity: 0.1;
+    }
+    50%{
+        transform: translateX(7em); 
+        opacity: 0.5;
+        font-weight: 900;
+    }
+    100%{
+        font-weight: 300; 
+        transition:all 1 s; 
+        opacity: 1;
+    }
+}
+@keyframes nav{
+    0%{
+        transform:translateY(20em); 
+        opacity: 0.1;
+        font-size:0.7em ; 
+    }
+    50%{
+        opacity: 0.5;
+        font-size: 1em ; 
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes nav-element-pressed{
+    0%{
+     
+    }
+    50%{
+        transform:translate(10em,-15.5em); 
+    }
+    100%{
+        transform:translate(10em,-15.5em); 
+
+    }
+}
+@keyframes section-to-up {
+    0%{
+
+    }
+    100%{
+        transform: translate(0,-350px);
+    }
+}
+
+@keyframes display-link-animation {
+    0%{
+        transform: scale(1) ;
+        opacity: 0.3;
+        color: #2d2d2d; 
+        
+    }
+    50%{
+        transform: scale(1.1) translateY(-0.1em);    
+        color:cadetblue;
+    }
+    75%{
+        transform: scale(1.2) translateY(-0.2em);       
+        opacity: 0.6;
+        color:cyan ; 
+    }
+    100%{
+        transform: scale(1) translateY(0.2em);       
+    }
+}
+@keyframes display-skills-section-animation{
+    0%{
+        transform: scale(1) ;
+        opacity: 0.7; 
+    }
+    50%{
+        transform: scale(1.1) translateY(-0.1em);    
+    }
+    100%{
+        transform: scale(1) translateY(0.2em);       
+    }
+}
+
+body{
+    font-family:roboto;
+    margin:0 ; 
+    padding: 0; 
+    -webkit-font-smoothing:antialiased ; 
+    background-color: #171c28;
+    overflow: hidden;
+}
+a{
+    text-decoration: none; 
+    color:inherit; 
+}
+nav {
+    margin: 10em auto ; 
+    text-align: center ; 
+    animation-name:nav;
+    animation-duration: 1.5s ;  
+}
+nav > a {
+    margin:0px 2em ; 
+    text-decoration: none ; 
+    color:#7e9199; 
+    font-size: 1.1em ; 
+    cursor:pointer ; 
+}
+nav > a:hover{
+    color:lightblue; 
+    transition: color,padding-bottom .3s ; 
+    padding-bottom: .5em ; 
+    border-bottom:2px solid #999 ; 
+    
+}
+main {
+    display: flex; 
+    flex-direction: row ; 
+    padding:2em ;  
+    width: 75% ;  
+    margin: 1em auto ; 
+    height: 50vh;;
+}
+main > div {
+    display: none ; 
+    padding: 1em ; 
+}
+
+main > div > h1 {
+    color:grey;
+}
+main > div > h1 > span {
+    color:lightblue; 
+}
+main > div h4 {
+    color:lightslategray;
+}
+main > div  img {
+    height: 2em;
+}
+main > div > p {
+    padding: 1em ; 
+    max-width: 50%;
+    border-radius:0px 30px 30px 30px; 
+}
+main > div > p a {
+    display:inline-block; 
+    margin-top: 1em; 
+    color:lightblue;
+    border: 1px solid ; 
+    padding: 0.5em ; 
+}
+
+main > div > p a:hover{
+    color:aqua;
+    border: 1px solid ; 
+    transition: color  0.5s ;
+}
+
+article {
+    display: grid; 
+    grid-template-columns: 1fr 1fr ; 
+}
+
+article > section {
+    border: 1px solid #ccc ; 
+    padding: 0em 0.5em ;
+    opacity: 0.8; 
+    background-color: #eee ; 
+    margin:0.3em 0px ; 
+    display: flex ; 
+    align-items: center;
+    justify-content: space-between; 
+;
+}
+main section ul {
+    display: flex; 
+    margin: 0px 0px 0px 1em; 
+    padding: 0px ;
+    align-items: center ; 
+    color:#666 ;
+}
+section ul li {
+    display: flex ; 
+    align-items: center; 
+    list-style-type: none ;
+    border-radius: 10px; 
+    margin: 0em 0.5em; 
+    padding: 0.5em ; 
+    background-color: #ccc ; 
+    border-radius: 100px; 
+
+}
+section ul li:hover {
+    background-color: #aaa ;
+    cursor:pointer ;      
+}
+header {
+    padding: 1em 2em ; 
+    width: 75% ;  
+    margin: 0px auto; 
+}
+
+#hello-msg {
+    max-width: 20em ; 
+    animation-name: hello-msg; 
+    animation-duration: 1s ; 
+    font-size: 2.5em ; 
+    color:#eee;
+}
+#hello-msg span{
+    color:#aaa;
+}
+
+#description {
+    display: block; 
+    letter-spacing: 1px ; 
+    position: relative;
+    top:-1em;
+    animation-name:description ; 
+    animation-duration: 1s ; 
+    color:lightblue; 
+}
+
+#about-me {
+    color:#aaa; 
+    line-height: 1.3em ; 
+}
+
+/* Skills */
+#skills h1{
+    display: grid ; 
+    grid-template-columns: 1fr 1fr ; 
+}
+
+#skill-description {
+    display: inline;
+    color :slategrey;
+    font-size: 2rem ; 
+}
+
+/* projects section */
+#projects h3 {
+    color:lightblue;
+    margin: 0.2em ; 
+}
+
+#projects em {
+    color:#ccc ; 
+    padding: 0.5em 0px 1em 0px; 
+}
+
+#projects-wrapper {
+    display: flex; 
+    flex-direction: row ; 
+    text-align: center; 
+}
+#projects-wrapper div {
+    margin : 0em 6em 2em 0em ; 
+    display: flex ; 
+    flex-direction: column; 
+}
+
+#projects-wrapper img {
+    height: 15em ; 
+    width: 10em ; 
+    border:10px solid #fff ; 
+    border-radius: 10px; 
+}
+
+#projects-wrapper span {
+    padding: 0.5em ; 
+    color: lightblue ; 
+    border-radius: 5px; 
+    border:1px solid ; 
+    display: inline-block;
+    margin-top: 1em ;     
+
+}
+#projects-wrapper span:hover{
+    background-color:lightblue; 
+    color:#1d2224;
+    transition: all 0.5s ; 
+
+}
+
+/* Links & contact */
+
+#social-networks{
+    color:#444 ; 
+    padding: 1em 0em ; 
+    width:99%;  
+}
+#social-networks{
+    color:lightblue; 
+}
+#social-networks div{
+    display:flex ;  
+    margin-top: 1em ; 
+}
+#social-networks a{
+    color:#888 ; 
+    font-size: 2em ; 
+    margin-right: 2em ; 
+}
+#social-networks a:hover{
+    color:#eee ; 
+    transition:color 0.7s ; 
+}
+.link-hovered::after{
+    content :attr(description);
+    display: block; 
+    position: absolute;
+    margin-top: 0.6em ; 
+    font-weight: 500;
+    font-size: 1.2rem !important; 
+}
+.active {
+    color:#eee ; 
+
+}
+.active:before {
+    padding-right: 5px; 
+    font-size: 1.2em ; 
+    content: "\203A";	 
+    color:#fff ; 
+}
+
+.active:hover{
+    color:lightblue;   
+
+}
