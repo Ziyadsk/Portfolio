@@ -58,6 +58,7 @@ function animateSkillSections(){
 	});
 
 }
+
 // skills 
 (function () {
 	document.querySelectorAll("#skills li").forEach((e) => {
