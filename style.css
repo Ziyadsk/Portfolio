@@ -1,3 +1,5 @@
+@import "mobile.css" ;
+
 /*Greeting message that displays Hello,Ziyad */
 @keyframes hello-msg{
     0%{
@@ -136,7 +138,6 @@ main {
     padding:2em ;  
     width: 75% ;  
     margin: 1em auto ; 
-    height: 50vh;;
 }
 main > div {
     display: none ; 
@@ -180,15 +181,12 @@ article {
 }
 
 article > section {
-    border: 1px solid #ccc ; 
     padding: 0em 0.5em ;
     opacity: 0.8; 
-    background-color: #eee ; 
     margin:0.3em 0px ; 
     display: flex ; 
     align-items: center;
     justify-content: space-between; 
-;
 }
 main section ul {
     display: flex; 
@@ -237,6 +235,15 @@ header {
     animation-name:description ; 
     animation-duration: 1s ; 
     color:lightblue; 
+}
+
+#list-menu-trigger{
+    color:#ccc ;
+    cursor: pointer;
+    font-size:2em ; 
+    position: absolute ; 
+    right: 1em ; 
+    top :1.6em ;      
 }
 
 #about-me {
@@ -347,3 +354,4 @@ header {
     color:lightblue;   
 
 }
+
