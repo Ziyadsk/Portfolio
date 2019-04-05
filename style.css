@@ -244,6 +244,7 @@ header {
     position: absolute ; 
     right: 1em ; 
     top :1.6em ;      
+    display: none ; 
 }
 
 #about-me {
@@ -305,7 +306,6 @@ header {
     background-color:lightblue; 
     color:#1d2224;
     transition: all 0.5s ; 
-
 }
 
 /* Links & contact */
@@ -352,6 +352,4 @@ header {
 
 .active:hover{
     color:lightblue;   
-
 }
-

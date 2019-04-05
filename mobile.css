@@ -3,6 +3,9 @@
       height: auto ; 
       overflow:scroll !important; 
     }
+    #list-menu-trigger {
+        display: initial !important; 
+    }
     nav {
         display: flex; 
         flex-direction: column;
